@@ -1,6 +1,13 @@
 import React, { Component } from "react";
 import ReactDOM from "react-dom";
 import * as THREE from "three";
+import styled from 'styled-components'
+
+const Container = styled.div`
+  height: 100vh;
+  width: 100vw;
+`
+
 class App extends Component {
     componentDidMount() {
         this.sceneSetup();
@@ -82,7 +89,7 @@ class App extends Component {
     };
 
     render() {
-        return  <div ref={domElement => (this.el = domElement)} />
+        return  <Container ref={domElement => (this.el = domElement)} />
     }
 }
 const rootElement = document.getElementById("root");
